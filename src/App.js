@@ -1,6 +1,8 @@
 import MicRecorder from "mic-recorder-to-mp3";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 // Set AssemblyAI Axios Header
 const assembly = axios.create({
@@ -115,22 +117,26 @@ const App = () => {
 
   return (
     <div>
-      <audio ref={audioPlayer} src={blobURL} controls="controls" />
+    <h1 className="display-1">Text to speech App</h1>
+    <div className="App align-middle">
+      <audio className="player" ref={audioPlayer} src={blobURL} controls="controls" />
       <div>
-        <button disabled={isRecording} onClick={startRecording}>
-          Start
+        <button className="btn btn-success" disabled={isRecording} onClick={startRecording}>
+          Start recording
         </button>
-        <button disabled={!isRecording} onClick={stopRecording}>
-          Stop
+        <button className="btn btn-dark" disabled={!isRecording} onClick={stopRecording}>
+          Stop recording
         </button>
-        <button onClick={submitTranscriptionHandler}>Submit</button>
+        <button className="btn btn-primary" disabled={!audioFile} onClick={submitTranscriptionHandler}>Submit</button>
+        <button className="btn btn-danger" disabled={!audioFile} onClick={refreshPage}>Reset</button>
       </div>
       {transcriptData.status === "completed" ? (
         <p>{transcript}</p>
       ) : (
         <p>{transcriptData.status}...</p>
       )}
-      <button onClick={refreshPage}>RESET</button>
+      <footer>Made by Tellu</footer>
+    </div>
     </div>
   );
 };
