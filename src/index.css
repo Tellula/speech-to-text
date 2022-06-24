@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #2c2c2c !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Anek Latin", sans-serif;
+}
+
+body,
+html,
+.App,
+#root {
+  width: 100%;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(66, 111, 117);
+  color: black;
+  border-radius: 30px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.player {
+  margin: 40px;
+  align-self: center;
+  border: #2c2c2c solid 2px;
+  border-radius: 30px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #95cce5;
+}
+
+.title {
+  background-color: transparent;
+  color: black;
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.transcript {
+  margin: 20px;
+  font-size: 2em;
+  background-color: #95cce5;
+  border-radius: 30px;
+  width: 50vw;
+  align-self: center;
+}
