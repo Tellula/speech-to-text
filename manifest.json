@@ -1,6 +1,6 @@
 {
-  "short_name": "Text to speech app",
-  "name": "Create Text to speech app",
+  "short_name": "Speech to text app",
+  "name": "Create speech to text app",
   "icons": [
     {
       "src": "mic.png",
