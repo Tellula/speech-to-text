@@ -1,7 +1,6 @@
 import MicRecorder from "mic-recorder-to-mp3";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 // Set AssemblyAI Axios Header
@@ -116,27 +115,50 @@ const App = () => {
   }
 
   return (
-    <div>
-    <h1 className="display-1">Text to speech App</h1>
-    <div className="App align-middle">
-      <audio className="player" ref={audioPlayer} src={blobURL} controls="controls" />
+    <div className="App container">
+      <div className="title">Text to speech</div>
+      <audio
+        className="player"
+        ref={audioPlayer}
+        src={blobURL}
+        controls="controls"
+      />
       <div>
-        <button className="btn btn-success" disabled={isRecording} onClick={startRecording}>
+        <button
+          className="btn btn-success"
+          disabled={isRecording}
+          onClick={startRecording}
+        >
           Start recording
         </button>
-        <button className="btn btn-dark" disabled={!isRecording} onClick={stopRecording}>
+        <button
+          className="btn btn-success"
+          disabled={!isRecording}
+          onClick={stopRecording}
+        >
           Stop recording
         </button>
-        <button className="btn btn-primary" disabled={!audioFile} onClick={submitTranscriptionHandler}>Submit</button>
-        <button className="btn btn-danger" disabled={!audioFile} onClick={refreshPage}>Reset</button>
+        <button
+          className="btn btn-primary"
+          disabled={!audioFile}
+          onClick={submitTranscriptionHandler}
+        >
+          Submit
+        </button>
+        <button
+          className="btn btn-danger"
+          disabled={!audioFile}
+          onClick={refreshPage}
+        >
+          Reset
+        </button>
       </div>
       {transcriptData.status === "completed" ? (
-        <p>{transcript}</p>
+        <p className="transcript">{transcript}</p>
       ) : (
-        <p>{transcriptData.status}...</p>
+        <p className="transcript">{transcriptData.status}...</p>
       )}
-      <footer>Made by Tellu</footer>
-    </div>
+      <footer>-- Made by Tellu --</footer>
     </div>
   );
 };

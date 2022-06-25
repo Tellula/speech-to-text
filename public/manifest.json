@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Text to speech app",
+  "name": "Create Text to speech app",
   "icons": [
     {
       "src": "mic.png",
