@@ -49,7 +49,6 @@ const App = () => {
       .catch((e) => console.log(e));
   };
 
-  // AssemblyAI API
 
   // State variables
   const [uploadURL, setUploadURL] = useState("");
@@ -116,7 +115,7 @@ const App = () => {
 
   return (
     <div className="App container">
-      <div className="title">Text to speech</div>
+      <div className="title">Speech to Text</div>
       <audio
         className="player"
         ref={audioPlayer}

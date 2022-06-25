@@ -51,6 +51,7 @@ audio::-webkit-media-controls-panel {
 .title {
   background-color: transparent;
   color: black;
+  font-weight: 600;
   font-size: 4em;
   margin-bottom: 20px;
 }
